@@ -1,0 +1,15 @@
+[submodule "src/uavcan_ros_bridge"]
+	path = src/uavcan_ros_bridge
+	url = https://github.com/SubC-Partner/uavcan_ros_bridge.git
+[submodule "src/dvl_a50_ros_driver"]
+	path = src/dvl_a50_ros_driver
+	url = https://github.com/SubC-Partner/dvl-a50-ros-driver.git
+[submodule "src/bta_tof_driver"]
+	path = src/bta_tof_driver
+	url = https://github.com/SubC-Partner/bta_tof_driver.git
+[submodule "src/waterlinked_ros_driver"]
+	path = src/waterlinked_ros_driver
+	url = https://github.com/SubC-Partner/waterlinked_ros_driver.git
+[submodule "src/h4r_x52_joyext"]
+	path = src/h4r_x52_joyext
+	url = https://github.com/Hacks4ROS/h4r_x52_joyext
