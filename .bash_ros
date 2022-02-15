@@ -1,0 +1,21 @@
+alias launchbluerov2='ssh -t nvidia@192.168.2.10 "roslaunch bluerov2_bringup bluerov2_bringup.launch"'
+
+alias launchtopside='rosrun bluerov2_teleop bluerov2_teleop.sh'
+
+alias rostopside='source ~/catkin_ws/ROSTopsideScript'
+
+alias roslocal='source ~/catkin_ws/ROSLocalScript'
+
+alias sshbluerov2='ssh 192.168.2.10 -l nvidia'
+
+alias simjoystick='rosrun bluerov2_teleop bluerov2_simteleop.sh'
+
+#alias getrosbags='scp nvidia@192.168.2.10:./catkin_ws/Data/*.bag ~/Jetson_Data/'
+GetROSbags() {
+	if [[ $# -eq 0 ]]
+	then
+		echo -e 'Error: Please give the desired local location as argument'
+	else
+		scp nvidia@192.168.2.10:./catkin_ws/Data/*.bag "$1"
+	fi
+}
