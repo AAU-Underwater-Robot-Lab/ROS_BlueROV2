@@ -8,6 +8,7 @@
   <!-- Example:  -->
   <!-- <maintainer email="jane.doe@example.com">Jane Doe</maintainer> -->
   <maintainer email="chrimai@energy.aau.dk">Christian Mai</maintainer>
+  <maintainer email="ffso@energy.aau.dk">Fredrik Sørensen</maintainer>
 
 
   <!-- One license tag required, multiple allowed, one license per tag -->
@@ -49,18 +50,9 @@
   <!-- Use doc_depend for packages you need only for building documentation: -->
   <!--   <doc_depend>doxygen</doc_depend> -->
   <buildtool_depend>catkin</buildtool_depend>
-  <build_depend>bluerov2_sensor</build_depend>
-  <build_depend>bluerov2_thruster</build_depend>
-  <build_depend>rospy</build_depend>
-  <build_depend>std_msgs</build_depend>
-  <build_export_depend>bluerov2_sensor</build_export_depend>
-  <build_export_depend>bluerov2_thruster</build_export_depend>
-  <build_export_depend>rospy</build_export_depend>
-  <build_export_depend>std_msgs</build_export_depend>
-  <exec_depend>bluerov2_sensor</exec_depend>
-  <exec_depend>bluerov2_thruster</exec_depend>
-  <exec_depend>rospy</exec_depend>
-  <exec_depend>std_msgs</exec_depend>
+  <depend>bluerov2_thruster</depend>
+  <depend>rospy</depend>
+  <depend>std_msgs</depend>
 
 
   <!-- The export tag contains other, unspecified, tags -->
