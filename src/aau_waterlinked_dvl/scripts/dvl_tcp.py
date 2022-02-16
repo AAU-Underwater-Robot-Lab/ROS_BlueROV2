@@ -5,8 +5,8 @@ import rospy
 import math
 from time import sleep
 from std_msgs.msg import String
-from waterlinked_a50_ros_driver.msg import DVL
-from waterlinked_a50_ros_driver.msg import DVLBeam
+from aau_waterlinked_dvl.msg import DVL
+from aau_waterlinked_dvl.msg import DVLBeam
 import select
 from nav_msgs.msg import Odometry
 from sensor_msgs.msg import Imu
