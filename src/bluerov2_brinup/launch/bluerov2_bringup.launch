@@ -1,5 +1,5 @@
 <launch>
-
+	<?ignore
 	<!-- Robot description file -->
 	<include file="$(find bluerov2_description)/launch/upload.launch" />
 
@@ -7,6 +7,7 @@
 	<include file="$(find bluerov2_control)/launch/start_thruster_manager.launch" /> 
 
 	<!-- Sensor nodes begin -->
+	?>
 	<group ns="bluerov2">
 		<?ignore
 		<!-- Thuruster node - re-spawnable ROSSERIAL ON ARDUINO IS USED ON PROTOTYPE -->
@@ -21,19 +22,19 @@
 		?>
 
 		<!-- waterlinked dvl node --> 
-		<node pkg="waterlinked_a50_ros_driver" type="publisher.py" name="publisher">
+		<node pkg="aau_waterlinked_dvl" type="dvl_tcp.py" name="dvl_tcp">
 			<param name="ip" value="192.168.2.100"/>
 			<param name="port" value="16171"/>
 		</node>
 
 		<!-- waterlinked sbl node -->
-		<node pkg="waterlinked_sbl_driver" type="waterlinked_sbl_node.py" name="sbl">
+		<node pkg="aau_waterlinked_sbl" type="waterlinked_sbl_node.py" name="sbl">
 			<remap from="pose" to="estimator/pose" />
 		</node>
 
 		<!-- Estimators -->
 		<!-- Pose -->
-		<node pkg="bluerov2_pose_estimator" type="bluerov2_pose_estimator.py" name="pose_estimator" />
+		<!-- <node pkg="bluerov2_pose_estimator" type="bluerov2_pose_estimator.py" name="pose_estimator" /> -->
 
 	</group>
 	<!-- Sensor nodes end -->
