@@ -1,6 +1,13 @@
 # Underwater Robots ROS - Aalborg University
 Software Repo for Underwater Robots using Ros
 
+If you havn't installed ROS on your local pc, a guide can found [here](Install_ROS.md).
+
+## Sensors Found in this GitHub:
+[WaterLinked DVL](src/aau_waterlinked_dvl/README.md)
+
+[WaterLinked SBL](src/aau_waterlinked_dvl/README.md)
+
 # Startup of robot
 Robot contains Jetson board runnning Ubuntu
 
