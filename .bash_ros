@@ -19,3 +19,5 @@ GetROSbags() {
 		scp nvidia@192.168.2.10:./catkin_ws/Data/*.bag "$1"
 	fi
 }
+
+alias installrosdep='rosdep install --from-paths src --ignore-src -r -y'
