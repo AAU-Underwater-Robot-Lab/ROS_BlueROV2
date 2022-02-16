@@ -1,4 +1,3 @@
-[Home](.)
 # Underwater Robots ROS - Aalborg University
 Software Repo for Underwater Robots using Ros
 
