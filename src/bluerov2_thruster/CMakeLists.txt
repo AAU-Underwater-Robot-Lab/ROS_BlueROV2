@@ -9,7 +9,6 @@ project(bluerov2_thruster)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   roscpp
-  socketcan_bridge
   std_msgs
   message_generation
 )
