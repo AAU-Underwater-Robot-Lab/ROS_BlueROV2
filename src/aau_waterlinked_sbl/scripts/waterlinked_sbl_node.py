@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from __future__ import print_function
+import sys
 import requests
 import json
 import rospy
@@ -122,8 +123,13 @@ def waterlinked(base_url):
 
 if __name__ == '__main__':
     try:
-        base_url = "http://192.168.2.94"
-        #rospy.loginfo("Connecting to: %s",base_url)
+	base_url = "http://192.168.2.94"
+	if len(sys.argv) > 1:
+	    if(str(sys.argv[1]) == "demo"):
+		base_url = "http://demo.waterlinked.com"
+	    else:
+		base_url = str(sys.argv[1]) 
+        rospy.loginfo("Connecting to: %s",base_url)
 
         waterlinked(base_url)
     except rospy.ROSInterruptException:
