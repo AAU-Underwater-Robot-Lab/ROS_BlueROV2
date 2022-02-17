@@ -45,3 +45,12 @@ With the following, you can initialize rosdep.
 `rosdep update`
 
 Full Guide can be found [here](http://wiki.ros.org/melodic/Installation/Ubuntu "ROS melodic")
+
+## Install UUV
+
+Beside ROS Melodic, you will also need to install [Unmanned Underwater Vehicle Simulator](https://uuvsimulator.github.io/)
+Once ROS is installed, it can be installed by running the following code:
+
+`sudo apt install ros-melodic-uuv-simulator`
+
+<sub>Author: Fredrik Fogh Sørensen [ffso@energy.aau.dk](mailto:ffso@energy.aau.dk)</sub>
