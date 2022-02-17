@@ -1,0 +1,22 @@
+<launch>
+  <arg name="model_name" default="bluerov2"/>
+  <arg name="uuv_name" default="$(arg model_name)"/>
+  <arg name="joy_id" default="0"/>
+  <arg name="output_topic" default="cmd_vel"/>
+  <arg name="teleop_on" default="true"/>
+
+  <group ns="$(arg uuv_name)" if="$(arg teleop_on)">
+    <node pkg="joy" type="joy_node" name="joystick">
+      <param name="autorepeat_rate" value="10"/>
+      <param name="dev" value="/dev/input/js$(arg joy_id)"/>
+    </node>
+    <node pkg="uuv_teleop" type="vehicle_teleop.py" name="joy_uuv_velocity_teleop">
+      <remap from="output" to="/$(arg uuv_name)/$(arg output_topic)"/>
+      <remap from="joy" to="/$(arg uuv_name)/joy"/>
+      <rosparam command="load" file="$(find bluerov2_teleop)/config/joy_vel_logitech_x52_pro.yaml" />
+    </node>
+  </group>
+
+   <node pkg="topic_tools" type="transform" name="temp_controller" args="/bluerov2/cmd_vel /bluerov2/thruster_manager/input geometry_msgs/Wrench 'geometry_msgs.msg.Wrench(force=m.linear,torque=m.angular)' --import geometry_msgs" launch-prefix="bash -c 'sleep 5; $0 $@' "/>
+
+</launch>

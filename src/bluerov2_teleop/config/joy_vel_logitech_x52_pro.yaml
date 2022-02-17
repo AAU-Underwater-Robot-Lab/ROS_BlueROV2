@@ -1,0 +1,24 @@
+# This works for Logitech X52 Professional controllers.
+type: twist
+deadman_button: 5
+deadzone: 0.01
+mapping:
+  x:
+    axis: 1
+    gain: 1
+  y:
+    axis: 0
+    gain: 1
+  z:
+    axis: 2
+    gain: 1
+  roll:
+    axis: 7
+    gain: -1
+  pitch:
+    axis: 8
+    gain: 1
+  yaw:
+    axis: 5
+    gain: 1
+

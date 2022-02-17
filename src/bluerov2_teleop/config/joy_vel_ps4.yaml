@@ -1,0 +1,23 @@
+# This works for xbox 360 wireless controllers.
+type: twist
+deadman_button: 6
+mapping:
+  yaw:
+    axis: 0
+    gain: 1
+  z:
+    axis: 1
+    gain: 1
+  y:
+    axis: 3
+    gain: 1
+  x:
+    axis: 4
+    gain: 1
+  roll:
+    axis: 6
+    gain: -1
+  pitch:
+    axis: 7
+    gain: 1
+
