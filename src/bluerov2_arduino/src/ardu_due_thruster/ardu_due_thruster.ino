@@ -62,7 +62,6 @@ void setup()
   nh.getHardware()->setBaud(250000);
 
   nh.initNode();
-  delay(1000);
 
   nh.subscribe(s0);
   nh.subscribe(s1);
@@ -70,16 +69,15 @@ void setup()
   nh.subscribe(s3);
   nh.subscribe(s4);
   nh.subscribe(s5);
-
   
-  //nh.advertiseService(server)
-  servos[0].attach(3, 1100, 1900); //Thrust 1
-  servos[1].attach(5, 1100, 1900);//Thrust 2
-  servos[2].attach(6, 1100, 1900);//Thrust 3
-  servos[3].attach(9, 1100, 1900);//Thrust 4
-  servos[4].attach(10, 1100, 1900); //Thrust 5
-  servos[5].attach(11, 1100, 1900); //Thrust 6
-
+  //nh.advertiseService(server);
+  servos[0].attach(2, 1100, 1900); //Thrust 1
+  servos[1].attach(3, 1100, 1900);//Thrust 2
+  servos[2].attach(4, 1100, 1900);//Thrust 3
+  servos[3].attach(5, 1100, 1900);//Thrust 4
+  servos[4].attach(6, 1100, 1900); //Thrust 5
+  servos[5].attach(7, 1100, 1900); //Thrust 6
+ 
   //Attempt at arming sequence
   for(int i = 0; i < 6; i += 1) //Zero signala
   { 
