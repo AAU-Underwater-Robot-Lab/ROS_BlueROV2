@@ -1,24 +1,30 @@
-# Underwater Robots ROS - Aalborg University
+# <b>Underwater Robots ROS - Aalborg University</b>
 Software Repo for Underwater Robots using Ros
 
-If you havn't installed ROS on your local pc, a guide can found [here](Install_ROS.md).
+If you havn't installed ROS on your local pc, a guide can found [here](Doc/Install_ROS.md).
 
-## Sensors Found in this GitHub:
+## <b>Setup Repository</b>
+[Configure Repository](Doc/Config_BlueROV2_Repo.md)
+
+## <b>Sensors Found in this Repository:</b>
 [WaterLinked DVL](src/aau_waterlinked_dvl/README.md)
 
 [WaterLinked SBL](src/aau_waterlinked_dvl/README.md)
 
-# Startup of robot
+## <b>Thruster Setup:</b>
+[Configure Arduino Board](Doc/Config_Arduino.md)
+
+# <b>Startup of robot</b>
 Robot contains Jetson board runnning Ubuntu
 
-## Robot roslaunch
+## <b>Robot roslaunch</b>
 SSH to robot Jetson by:
 `ssh 192.168.2.10 -l nvidia`
 
 Run command
 `roslaunch bluerov2_bringup bluerov2_bringup.launch`
 
-## Joystick teleop 
+## <b>Joystick teleop</b> 
 Open terminal on teleoperation PC (eg. laptop)
 
 Run command
@@ -26,38 +32,38 @@ Run command
 
 **This command will set the ROS_IP and ROS_MASTER_URI enviroment variables, which will affect the ability to run local rosmaster and nodes!**
 
-# Setting up static IP on Topside computer
+# <b>Setting up static IP on Topside computer</b>
 The topside computer must have a static IP:
 192.168.2.50/90
 
 When running the command
 `rosrun bluerov2_teleop bluerov2_teleop.sh`, your static IP is auto detected and set.
 
-If you want to access rostopics etc. run `source ~/catkin_ws/Topside.sh`
+If you want to access rostopics etc. run `source ~/ROS_BlueROV2/Topside.sh`
 
 **This command will set the ROS_IP and ROS_MASTER_URI enviroment variables, which will affect the ability to run local rosmaster and nodes!**
 
-# Alias Commands
+# <b>Alias Commands</b>
 Often used commands for BlueROV2 is made to aliases, to make them easy to call and remember.
 
-## Setup aliases
-run `echo 'source ~/catkin_ws/.bash_ros' >> ~/.bashrc`
+## <b>Setup aliases</b>
+run `echo 'source ~/ROS_BlueROV2/.bash_ros' >> ~/.bashrc`
 
 **This command only has to be called once, as it will add .bash_ros to .bashrc, which is called on every terminal startup!**
 
 Restart terminal or run `source ~/bashrc`
 
-## Alias List
+## <b>Alias List</b>
 
 The Alias list is divided into two categories <b>User</b> and <b>Developer</b>.
 
-### User Commands:
+### <b>User Commands:</b>
 | `Command` | Description |
 | :------------ | -----------: |
 | `launchbluerov2` | Robot Roslaunch |
 | `launchtopside` | Launches Joystick |
 
-### Developber Commands
+### <b>Developber Commands</b>
 | `Command` | Description |
 | :------------ | -----------: |
 | `rostopside` | Set the ROS_IP and ROS_MASTER_URI enviroment variables for communication with the robot |
