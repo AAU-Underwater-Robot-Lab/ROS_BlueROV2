@@ -1,7 +1,7 @@
 ## Install BlueROV2 Repository
 Setup Github connection to the repository
 
-`git clone https://github.com/AAU-Underwater-Robot-Lab/ROS_BlueROV2.git catkin_ws`
+`git clone https://github.com/EsbenAAUEnergy/ROS_BlueROV2.git catkin_ws`
 
 `cd catkin_ws`
 
