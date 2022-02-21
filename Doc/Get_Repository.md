@@ -11,9 +11,11 @@ Setup Github connection to the repository
 
 `catkin build`
 
-`source ~/catkin_ws/devel/setup.sh`
+`echo "source ~/catkin_ws/devel/setup.sh" >> ~/.bashrc`
 
-`source ~/catkin_ws/.bash_ros`
+`echo "source ~/catkin_ws/.bash_ros" >> ~/.bashrc`
+
+`source ~/.bashrc`
 
 `installrosdep`
 
