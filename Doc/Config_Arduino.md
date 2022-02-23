@@ -14,9 +14,9 @@ Install the Arduino IDE on you PC, you can either get it from Ubuntu Software or
 
 When the <b>Arduino IDE</b> is fully installed, run the following commands:
 
-`sudo apt-install ros-melodic-rosserial-arduino`
+`sudo apt-get install ros-melodic-rosserial-arduino`
 
-`sudo apt-install ros-melodic-rosserial`
+`sudo apt-get install ros-melodic-rosserial`
 
 `cd ~/catkin_ws`
 
