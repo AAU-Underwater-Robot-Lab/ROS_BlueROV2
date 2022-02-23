@@ -14,7 +14,7 @@ Install the Arduino IDE on you PC, you can either get it from Ubuntu Software or
 
 When the <b>Arduino IDE</b> is fully installed, run the following commands:
 
-`cd ~/ROS_BlueROV2`
+`cd ~/catkin_ws`
 
 `rosrun rosserial_arduino make_libraries.py`
 
@@ -26,21 +26,21 @@ Choose one of the 3 different Step 1, depending on thruster configuration and ar
 ### <b>Step 1: BlueROV2 standard configuration (Arduino Nano/Uno):</b>
 Open file:
 
-~/ROS_BlueROV2/src/bluerov2_arduino/src/ardu_thruster/ardu_thruster.ino
+~/catkin_ws/src/bluerov2_arduino/src/ardu_thruster/ardu_thruster.ino
 
 Upload to board
 
 ### <b>Step 1: BlueROV2 standard configuration (Arduino DUE):</b>
 Open file:
 
-~/ROS_BlueROV2/src/bluerov2_arduino/src/ardu_due_thruster/ardu_due_thruster.ino
+~/catkin_ws/src/bluerov2_arduino/src/ardu_due_thruster/ardu_due_thruster.ino
 
 Upload to board
 
 ### <b>Step 1: BlueROV2 heavy configuration (Arduino DUE only):</b>
 Open file:
 
-~/ROS_BlueROV2/src/bluerov2_arduino/src/ardu_heavy_thruster/ardu_heavy_thruster.ino
+~/catkin_ws/src/bluerov2_arduino/src/ardu_heavy_thruster/ardu_heavy_thruster.ino
 
 Upload to board
 
