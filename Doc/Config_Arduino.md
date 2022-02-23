@@ -20,7 +20,8 @@ When the <b>Arduino IDE</b> is fully installed, run the following commands:
 
 `cd ~/catkin_ws`
 
-`rosrun rosserial_arduino make_libraries.py`
+`rosrun rosserial_arduino make_libraries.py` 
+(make sure to attach the path to the arduino library after .py)
 
 ## <b>Setup Arduino Board</b>
 Open the <b>Arduino IDE</b>
