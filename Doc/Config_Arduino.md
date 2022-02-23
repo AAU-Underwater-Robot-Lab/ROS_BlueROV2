@@ -8,20 +8,20 @@ Laptop with following:
 * ROS-Melodic - [How to install](Install_ROS.md)
 * [BlueROV2 repository](https://github.com/AAU-Underwater-Robot-Lab/ROS_BlueROV2)
 
-
-## <b>Setup Arduino IDE</b>
-Install the Arduino IDE on you PC, you can either get it from Ubuntu Software or download it here: [Arduino Software](https://www.arduino.cc/en/software)
-
-When the <b>Arduino IDE</b> is fully installed, run the following commands:
+## <b>Install ROS libraries:</b>
 
 `sudo apt-get install ros-melodic-rosserial-arduino`
 
 `sudo apt-get install ros-melodic-rosserial`
 
+## <b>Setup Arduino IDE</b>
+Install the Arduino IDE on you PC, you can either get it from Ubuntu Software or download it here: [Arduino Software](https://www.arduino.cc/en/software)
+
+When the <b>Arduino IDE</b> is fully installed, find the path of the Arduino library and run the following commands:
+
 `cd ~/catkin_ws`
 
-`rosrun rosserial_arduino make_libraries.py` 
-(make sure to attach the path to the arduino library after .py)
+`rosrun rosserial_arduino make_libraries.py <ARDUINO_LIBRARY_PATH>` (ex. ~/Arduino/libraries)
 
 ## <b>Setup Arduino Board</b>
 Open the <b>Arduino IDE</b>
