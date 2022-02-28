@@ -1,0 +1,4 @@
+#!/bin/bash
+unset ROS_MASTER_URI
+unset ROS_IP
+echo "Changed to Local ROS Settings"
