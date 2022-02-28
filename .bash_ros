@@ -6,7 +6,7 @@ alias rostopside='source ~/catkin_ws/ROSTopsideScript'
 
 alias roslocal='source ~/catkin_ws/ROSLocalScript'
 
-alias sshbluerov2='ssh 192.168.2.10 -l nvidia'
+alias sshbluerov2='ssh 192.168.2.20 -l nano'
 
 alias simjoystick='rosrun bluerov2_teleop bluerov2_simteleop.sh'
 
