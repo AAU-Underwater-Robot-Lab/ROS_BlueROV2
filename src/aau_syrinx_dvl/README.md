@@ -1,13 +1,9 @@
 [Go back](../../README.md)
-# ROS driver for the Waterlinked DVL (A50 + A125)
+# ROS driver for the SonarDyne Syrinx DVL
 
 ## For TCP connection (Ethernet)
 ```python
-rosrun aau_waterlinked_dvl dvl_tcp.py
+rosrun aau_syrinx_dvl dvl_tcp.py
 ```
-Note: Default IP: 192.168.2.100
+Note: Default IP: 192.168.179.200 Default Port: 4000
 
-## For Serial connection (Mini USB)
-```python
-rosrun aau_waterlinked_dvl dvl_serial.py
-```
