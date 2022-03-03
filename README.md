@@ -19,7 +19,7 @@ Robot contains Jetson board runnning Ubuntu
 
 ## <b>Robot roslaunch</b>
 SSH to robot Jetson by:
-`ssh 192.168.2.10 -l nvidia`
+`ssh 192.168.2.10 -l nano`
 
 Run command
 `roslaunch bluerov2_bringup bluerov2_bringup.launch`
