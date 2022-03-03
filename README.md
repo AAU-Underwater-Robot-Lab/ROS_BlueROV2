@@ -51,7 +51,7 @@ run `echo 'source ~/catkin_ws/.bash_ros' >> ~/.bashrc`
 
 **This command only has to be called once, as it will add .bash_ros to .bashrc, which is called on every terminal startup!**
 
-Restart terminal or run `source ~/bashrc`
+Restart terminal or run `source ~/.bashrc`
 
 ## <b>Alias List</b>
 
@@ -70,4 +70,4 @@ The Alias list is divided into two categories <b>User</b> and <b>Developer</b>.
 | `roslocal` | Unset the ROS_IP and ROS_MASTER_URI enviroment variables to be able to use local rosmaster |
 | `sshbluerov2` | SSH into the Jetson on the robot|
 | `simjoystick` | Launches Link between Joystick and Simulink |
-| `getrosbags <DISTINATION/FOLDER/LOCATION>` | Get rosbags from the robot using scp to a desired location |
+| `getrosbags <DESTINATION/FOLDER/LOCATION>` | Get rosbags from the robot using scp to a desired location |
