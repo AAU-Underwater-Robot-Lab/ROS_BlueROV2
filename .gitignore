@@ -39,6 +39,7 @@ srv/_*.py
 *.pyc
 qtcreator-*
 *.user
+.DS_Store
 
 /planning/cfg
 /planning/docs
