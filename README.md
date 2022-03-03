@@ -39,7 +39,7 @@ The topside computer must have a static IP:
 When running the command
 `rosrun bluerov2_teleop bluerov2_teleop.sh`, your static IP is auto detected and set.
 
-If you want to access rostopics etc. run `source ~/ROS_BlueROV2/Topside.sh`
+If you want to access rostopics etc. run `source ~/catkin_ws/Topside.sh`
 
 **This command will set the ROS_IP and ROS_MASTER_URI enviroment variables, which will affect the ability to run local rosmaster and nodes!**
 
@@ -47,7 +47,7 @@ If you want to access rostopics etc. run `source ~/ROS_BlueROV2/Topside.sh`
 Often used commands for BlueROV2 is made to aliases, to make them easy to call and remember.
 
 ## <b>Setup aliases</b>
-run `echo 'source ~/ROS_BlueROV2/.bash_ros' >> ~/.bashrc`
+run `echo 'source ~/catkin_ws/.bash_ros' >> ~/.bashrc`
 
 **This command only has to be called once, as it will add .bash_ros to .bashrc, which is called on every terminal startup!**
 
