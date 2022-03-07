@@ -41,7 +41,7 @@
 
 	<!-- Record rosbag begin -->
 	<arg name="excludeTopics" value="/rosout|/rosout_agg|/diagnostics" />
-	<node pkg="rosbag" type="record" name="rosbag_record" output="screen" args="record --split --size=2048 -o /home/$(env USER)/BlueROV2_catkin_ws/Data/BlueROV2 -a -x $(arg excludeTopics)"/> 
+	<node pkg="rosbag" type="record" name="rosbag_record" output="screen" args="record --split --size=2048 -o /home/$(env USER)/catkin_ws/Data/BlueROV2 -a -x $(arg excludeTopics)"/> 
 	<!-- Record rosbag end  -->
 
 </launch>
