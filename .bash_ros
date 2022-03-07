@@ -21,3 +21,5 @@ GetROSbags() {
 }
 
 alias installrosdep='rosdep install --from-paths src --ignore-src -r -y'
+
+sudo chmod 777 /dev/ttyACM0
