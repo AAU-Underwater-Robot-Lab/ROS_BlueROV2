@@ -1,0 +1,47 @@
+<launch>
+	<?ignore
+	<!-- Robot description file -->
+	<include file="$(find bluerov2_description)/launch/upload.launch" />
+
+	<!-- Thruster manager --> 
+	<include file="$(find bluerov2_control)/launch/start_thruster_manager.launch" /> 
+
+	<!-- Sensor nodes begin -->
+	?>
+	<group ns="bluerov2">
+		<?ignore
+		<!-- Thuruster node - re-spawnable ROSSERIAL ON ARDUINO IS USED ON PROTOTYPE -->
+		<!--  <node name="thrusters" pkg="bluerov2_thruster" type="bluerov2_thruster_node" respawn="true" /> -->
+
+		<!-- rosserial node - re-spawnable -->
+		<node name="rosserial" pkg="rosserial_python" type="serial_node.py">
+			<param name="port" value="/dev/ttyAMC0" />
+			<param name="baud" value="250000" />
+			<remap from="powerbottle_temp" to="temp/power_bottle" /> 
+		</node>
+		?>
+
+		<!-- waterlinked dvl node --> 
+		<node pkg="aau_waterlinked_dvl" type="dvl_tcp.py" name="dvl_tcp">
+			<param name="ip" value="192.168.2.100"/>
+			<param name="port" value="16171"/>
+		</node>
+
+		<!-- waterlinked sbl node -->
+		<node pkg="aau_waterlinked_sbl" type="waterlinked_sbl_node.py" name="sbl">
+			<remap from="pose" to="estimator/pose" />
+		</node>
+
+		<!-- Estimators -->
+		<!-- Pose -->
+		<!-- <node pkg="bluerov2_pose_estimator" type="bluerov2_pose_estimator.py" name="pose_estimator" /> -->
+
+	</group>
+	<!-- Sensor nodes end -->
+
+	<!-- Record rosbag begin -->
+	<arg name="excludeTopics" value="/rosout|/rosout_agg|/diagnostics" />
+	<node pkg="rosbag" type="record" name="rosbag_record" output="screen" args="record --split --size=2048 -o /home/$(env USER)/BlueROV2_catkin_ws/Data/BlueROV2 -a -x $(arg excludeTopics)"/> 
+	<!-- Record rosbag end  -->
+
+</launch>
