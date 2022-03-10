@@ -1,17 +1,8 @@
+#define USBCON
+#define USE_USBCON
 #include <ros.h>
 #include <bluerov2_thruster/ThrusterCmd.h>
-//#include <std_msgs/Time.h>
-//#include <sensor_msgs/Temperature.h>
-//#include <std_srvs/Trigger.h>
 #include <Servo.h>
-
-/*
-class NewHardware : public ArduinoHardware
-{
-  public:
-  NewHardware():ArduinoHardware(&Serial, 115200){};
-};
-*/
 
 //Init servos and callbacks
 Servo servos[6];
@@ -47,17 +38,17 @@ void t5( const bluerov2_thruster::ThrusterCmd& msg){
 }
 
 //Init rosserial node
-//ros::ServiceServer<std_srvs::TriggerRequest, std_srvs::TriggerResponse> server("arm_esc",&svcCallback);
 ros::NodeHandle nh;
+
+ros::Subscriber<bluerov2_thruster::ThrusterCmd> s0("thrusters/0/input", &t0);
+ros::Subscriber<bluerov2_thruster::ThrusterCmd> s1("thrusters/1/input", &t1);
+ros::Subscriber<bluerov2_thruster::ThrusterCmd> s2("thrusters/2/input", &t2);
+ros::Subscriber<bluerov2_thruster::ThrusterCmd> s3("thrusters/3/input", &t3);
+ros::Subscriber<bluerov2_thruster::ThrusterCmd> s4("thrusters/4/input", &t4);
+ros::Subscriber<bluerov2_thruster::ThrusterCmd> s5("thrusters/5/input", &t5);
 
 void setup()
 {
-  ros::Subscriber<bluerov2_thruster::ThrusterCmd> s0("thrusters/0/input", &t0);
-  ros::Subscriber<bluerov2_thruster::ThrusterCmd> s1("thrusters/1/input", &t1);
-  ros::Subscriber<bluerov2_thruster::ThrusterCmd> s2("thrusters/2/input", &t2);
-  ros::Subscriber<bluerov2_thruster::ThrusterCmd> s3("thrusters/3/input", &t3);
-  ros::Subscriber<bluerov2_thruster::ThrusterCmd> s4("thrusters/4/input", &t4);
-  ros::Subscriber<bluerov2_thruster::ThrusterCmd> s5("thrusters/5/input", &t5);
 
   nh.getHardware()->setBaud(250000);
 
