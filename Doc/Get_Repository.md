@@ -1,4 +1,6 @@
-## Install BlueROV2 Repository
+[Go back](../README.md)
+
+# <b>Get Repository</b>
 Setup Github connection to the repository
 
 Fork this repository to your own github account, by pressing **Fork** in the upper right corner.
