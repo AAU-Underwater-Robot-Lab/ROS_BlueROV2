@@ -22,30 +22,32 @@ def connect():
 
 theDVL = DVL()
 theDVLBeam = DVLBeam()
-beam0 = theDVLBeam
 beam1 = theDVLBeam
 beam2 = theDVLBeam
 beam3 = theDVLBeam
+beam4 = theDVLBeam
 
 def getData():
-    raw_data = ""
-    while not '\n' in raw_data:
-        try:
-            raw_data = s.recv(1024).decode() # Add timeout for that
-            if len(raw_data) == 0:
-                rospy.logerr("Socket closed by the DVL, reopening")
-                connect()
-                continue
-        except socket.timeout as err:
-            rospy.logerr("Lost connection with the DVL, reinitiating the connection: {}".format(err))
-            connect()
-            continue
-    data = raw_data.split(',')
-    return data
+	raw_data = ""
+	try:
+	    #raw_data = s.recv(1024).decode() # Add timeout for that
+	    raw_data = ""
+
+	    while not '\n' in raw_data:
+		rec = s.recv(1).decode()
+		raw_data = raw_data + rec
+	    if len(raw_data) == 0:
+		rospy.logerr("Socket closed by the DVL, reopening")
+		connect()
+	except socket.timeout as err:
+	    rospy.logerr("Lost connection with the DVL, reinitiating the connection: {}".format(err))
+	    connect()
+	data = raw_data.split(',')
+	return data
     
 
 def publisher():
-	pub = rospy.Publisher('dvl', DVL, queue_size=10)
+	pub = rospy.Publisher('dvl_syrinx', DVL, queue_size=10)
 	rate = rospy.Rate(10) # 10hz
 	while not rospy.is_shutdown():
 		data = getData()
@@ -97,8 +99,6 @@ def publisher():
 
 			theDVL.beams = [beam1, beam2, beam3, beam4]
 
-			sv = data[10]
-			theDVL.sv = float(sv[2:])
 			pub.publish(theDVL)
 		rate.sleep()
 
