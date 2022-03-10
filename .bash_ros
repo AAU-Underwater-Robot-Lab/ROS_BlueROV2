@@ -1,4 +1,4 @@
-alias launchbluerov2='ssh -t nvidia@192.168.2.10 "roslaunch bluerov2_bringup bluerov2_bringup.launch"'
+alias launchbluerov2='ssh -t nano@192.168.2.10 "roslaunch bluerov2_bringup bluerov2_bringup.launch"'
 
 alias launchtopside='rosrun bluerov2_teleop bluerov2_teleop.sh'
 
@@ -10,14 +10,15 @@ alias sshbluerov2='ssh 192.168.2.20 -l nano'
 
 alias simjoystick='rosrun bluerov2_teleop bluerov2_simteleop.sh'
 
-#alias getrosbags='scp nvidia@192.168.2.10:./catkin_ws/Data/*.bag ~/Jetson_Data/'
+#alias getrosbags='scp nano@192.168.2.10:./catkin_ws/Data/*.bag ~/Jetson_Data/'
 GetROSbags() {
 	if [[ $# -eq 0 ]]
 	then
 		echo -e 'Error: Please give the desired local location as argument'
 	else
-		scp nvidia@192.168.2.10:./catkin_ws/Data/*.bag "$1"
+		scp nano@192.168.2.10:./catkin_ws/Data/*.bag "$1"
 	fi
 }
 
 alias installrosdep='rosdep install --from-paths src --ignore-src -r -y'
+

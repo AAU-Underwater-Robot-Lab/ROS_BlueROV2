@@ -47,12 +47,14 @@ If you want to access rostopics etc. run
 
 `source ~/catkin_ws/Topside.sh`
 
+
 **This command will set the ROS_IP and ROS_MASTER_URI enviroment variables, which will affect the ability to run local rosmaster and nodes!**
 
 # <b>Alias Commands</b>
 Often used commands for BlueROV2 is made to aliases, to make them easy to call and remember.
 
 ## <b>Setup aliases</b>
+
 run
 
 `echo 'source ~/catkin_ws/.bash_ros' >> ~/.bashrc`

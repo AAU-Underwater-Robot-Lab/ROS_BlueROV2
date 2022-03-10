@@ -17,7 +17,7 @@ Laptop with following:
 ## <b>Setup Arduino IDE</b>
 Install the Arduino IDE on you PC, you can either get it from Ubuntu Software or download it here: [Arduino Software](https://www.arduino.cc/en/software)
 
-When the <b>Arduino IDE</b> is fully installed, run the following commands:
+When the <b>Arduino IDE</b> is fully installed, find the path of the Arduino library and run the following commands:
 
 `cd ~/catkin_ws`
 
