@@ -3,7 +3,7 @@
 # <b>Install ROS-Melodic</b>
 Required Operation System:
 
-* Laptop: Ubuntu 18.04.6 LTS
+* Desktop: Ubuntu 18.04.6 LTS [Download Here](https://releases.ubuntu.com/18.04/)
 
 * Jetson: JetPack 4.6 [Download Here](https://developer.nvidia.com/jetson-nano-sd-card-image)
 
@@ -19,6 +19,8 @@ Required Operation System:
 `sudo apt update`
 
 `sudo apt install ros-melodic-desktop-full`
+
+**Troubleshooting: If you get the error: `E: Unable to locate package ros-melodic-desktop-full`, check your Ubuntu Version, it MUST be Ubuntu 18.04 as newer versions does not support ros-melodic-desktop-full version!**
 
 ## <b>Environment setup</b>
 It's convenient if the ROS environment variables are automatically added to your bash session every time a new shell is launched:
