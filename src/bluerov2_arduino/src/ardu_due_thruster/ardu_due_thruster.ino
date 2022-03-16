@@ -49,7 +49,7 @@ ros::Subscriber<bluerov2_thruster::ThrusterCmd> s5("thrusters/5/input", &t5);
 
 void setup()
 {
-
+  Serial.begin(250000);
   nh.getHardware()->setBaud(250000);
 
   nh.initNode();
