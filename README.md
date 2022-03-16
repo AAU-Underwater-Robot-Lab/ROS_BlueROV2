@@ -6,13 +6,22 @@ If you havn't installed ROS on your local pc, a guide can found [here](Doc/Insta
 ## <b>Get Repository</b>
 [Fork Repository](Doc/Get_Repository.md)
 
-## <b>Sensors Found in this Repository:</b>
-[WaterLinked DVL](src/aau_waterlinked_dvl/README.md)
+## <b>Share wireless internet through ethernet</b>
+[Setup wireless internet sharing](Doc/SetupInternetSharing.md)
 
-[WaterLinked SBL](src/aau_waterlinked_sbl/README.md)
+## <b>Sensors Found in this Repository:</b>
+[WaterLinked DVL](src/aau_waterlinked_dvl/README.md) - package: aau_waterlinked_dvl
+
+[WaterLinked SBL](src/aau_waterlinked_sbl/README.md) - package: aau_waterlinked_sbl
+
+[MS5837 Pressure Sensor](src/bluerov2_ms5837/README.md) - package: bluerov2_ms5837
+
+SydDynamic TM200 (No documentation yet) - package: bluerov2_tm200
 
 ## <b>Thruster Setup:</b>
-[Configure Arduino Board](Doc/Config_Arduino.md)
+[Configure Arduino Board](Doc/Config_Arduino.md) - package: bluerov2_arduino
+
+[Configure Thruster Manager](src/bluerov2_thruster/README.md) - package: bluerov2_thruster
 
 # <b>Startup of robot</b>
 Robot contains Jetson board runnning Ubuntu
