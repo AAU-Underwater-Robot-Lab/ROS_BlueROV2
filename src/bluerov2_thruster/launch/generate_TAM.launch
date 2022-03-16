@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Name of the robot model  -->
+  <arg name="model_name" default="bluerov2"/>
+  <!-- Output folder to store the TAM.yaml and thruster_manager.yaml files -->
+  <arg name="output_dir" default="$(find bluerov2_thruster)/config/$(arg model_name)"/>
+  <!-- thrusterplacement_file -->
+  <arg name="thrusterplacement_file" default="$(find bluerov2_thruster)/config/$(arg model_name)/thruster_placement.yaml"/>
+  <!-- Thruster allocation matrix file path -->
+  <arg name="tam_file" default="$(find bluerov2_thruster)/config/$(arg model_name)/TAM.yaml"/>
+
+  <node pkg="bluerov2_thruster" type="generate_TAM.py" name="generate_TAM" output="screen">
+    <!-- Load thruster allocation matrix -->
+    <param name="model_name" type="string" value="$(arg model_name)"/>"
+    <param name="thrusterplacement_file" type="string" value="$(arg thrusterplacement_file)"/>
+    <param name="tam_file" type="string" value="$(arg tam_file)"/>
+  </node>
+
+</launch>
