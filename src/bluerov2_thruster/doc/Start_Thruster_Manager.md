@@ -62,7 +62,7 @@ If you find an issue, please report it in [Teams](https://teams.microsoft.com/l/
 
 ## Contributors 
 
-* Current maintaner: FirstName LastName (contact:email@aau.dk)
+* Current maintainer: Fredrik Sørensen (contact:ffso@energy.aau.dk)
 
 ## Helpful Resources
 
