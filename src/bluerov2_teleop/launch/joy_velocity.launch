@@ -13,7 +13,7 @@
     <node pkg="uuv_teleop" type="vehicle_teleop.py" name="joy_uuv_velocity_teleop">
       <remap from="output" to="/$(arg uuv_name)/$(arg output_topic)"/>
       <remap from="joy" to="/$(arg uuv_name)/joy"/>
-      <rosparam command="load" file="$(find bluerov2_teleop)/config/joy_vel_logitech_x52_pro.yaml" />
+      <rosparam command="load" file="$(find bluerov2_teleop)/config/joy_vel_ps4.yaml" />
     </node>
   </group>
 
