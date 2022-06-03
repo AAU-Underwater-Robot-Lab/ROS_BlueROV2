@@ -1,0 +1,16 @@
+<launch>
+
+	
+
+	<group ns="BlueROV2">
+		<node name="talker" pkg="example_package" type="talker.py" >
+			<remap from="chatter" to="Sensors/chatter" />
+			<param name="textToPrint" value="BlueROV2!" />
+		</node>
+
+		<group ns="Sensors">
+			<node name="listener" pkg="example_package" type="listener.py" output="screen" />		
+		</group>
+	</group>
+
+</launch>
