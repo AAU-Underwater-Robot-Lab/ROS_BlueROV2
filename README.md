@@ -29,7 +29,12 @@ Robot contains Jetson board runnning Ubuntu
 ## <b>Robot roslaunch</b>
 SSH to robot Jetson by:
 
-`ssh 192.168.2.10 -l nano`
+`ssh 192.168.3.10 -l jetson`
+
+Using password: `jetson`
+
+Also useable is SSH:
+`ssh jetson@192.168.3.10`
 
 **If nano is not the username on the Jetson board, it must be replaced with the actual username!** 
 
